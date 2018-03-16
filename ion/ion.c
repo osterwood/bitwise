@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdint.h>
 #include <stddef.h>
@@ -25,7 +26,7 @@ void *xmalloc(size_t num_bytes) {
     return ptr;
 }
 
-// Stretchy Buffers Implementation
+// stretchy buffers, invented (?) by sean barrett
 
 typedef struct BufHdr {
     size_t len;
@@ -40,7 +41,7 @@ typedef struct BufHdr {
 #define buf_len(b) ((b) ? buf__hdr(b)->len : 0)
 #define buf_cap(b) ((b) ? buf__hdr(b)->cap : 0)
 #define buf_push(b, x) (buf__fit(b, 1), b[buf_len(b)] = (x), buf__hdr(b)->len++)
-#define buf_free(b) ((b) ? free(buf__hdr(b)) : 0, (b) = NULL)
+#define buf_free(b) ((b) ? free(buf__hdr(b)) : 0)
 
 void *buf__grow(const void *buf, size_t new_len, size_t elem_size) {
     size_t new_cap = MAX(1 + 2*buf_cap(buf), new_len);
@@ -58,16 +59,16 @@ void *buf__grow(const void *buf, size_t new_len, size_t elem_size) {
 }
 
 void buf_test() {
-    int *buffer = NULL;
-    enum {N = 16};
+    int *asdf = NULL;
+    enum { N = 1024 };
     for (int i = 0; i < N; i++) {
-        buf_push(buffer, i);
+        buf_push(asdf, i);
     }
-    assert(buf_len(buffer) == N);
-    for (int i = 0; i < buf_len(buffer); i++) {
-        assert(buffer[i] == i);
+    assert(buf_len(asdf) == N);
+    for (int i = 0; i < buf_len(asdf); i++) {
+        assert(asdf[i] == i);
     }
-    buf_free(buffer);
+    buf_free(asdf);
 }
 
 // lexing: translating char stream to token stream
@@ -210,4 +211,3 @@ int main(int argc, char **argv) {
     lex_test();
     return 0;
 }
-
