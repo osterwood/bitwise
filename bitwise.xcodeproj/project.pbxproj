@@ -6,8 +6,12 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		839E67F9205ABA040039274B /* ion.c in Sources */ = {isa = PBXBuildFile; fileRef = 839E67F7205ABA040039274B /* ion.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		83EECB2E205AA82D003DE78A /* CopyFiles */ = {
+		839E67ED205AB9EE0039274B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -20,13 +24,13 @@
 
 /* Begin PBXFileReference section */
 		839E67C5205AAA600039274B /* notes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = notes; sourceTree = "<group>"; };
-		839E67C8205AAA870039274B /* ion */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ion; sourceTree = "<group>"; };
 		839E67C9205AAB180039274B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		83EECB30205AA82D003DE78A /* bitwise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bitwise; sourceTree = BUILT_PRODUCTS_DIR; };
+		839E67EF205AB9EE0039274B /* ion */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ion; sourceTree = BUILT_PRODUCTS_DIR; };
+		839E67F7205ABA040039274B /* ion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ion.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		83EECB2D205AA82D003DE78A /* Frameworks */ = {
+		839E67EC205AB9EE0039274B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,42 +40,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		839E67F6205ABA040039274B /* ion */ = {
+			isa = PBXGroup;
+			children = (
+				839E67F7205ABA040039274B /* ion.c */,
+			);
+			path = ion;
+			sourceTree = "<group>";
+		};
 		83EECB27205AA82C003DE78A = {
 			isa = PBXGroup;
 			children = (
+				839E67F6205ABA040039274B /* ion */,
 				839E67C9205AAB180039274B /* README.md */,
-				839E67C8205AAA870039274B /* ion */,
 				839E67C5205AAA600039274B /* notes */,
-				83EECB31205AA82D003DE78A /* Products */,
+				839E67EF205AB9EE0039274B /* ion */,
 			);
-			sourceTree = "<group>";
-		};
-		83EECB31205AA82D003DE78A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				83EECB30205AA82D003DE78A /* bitwise */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83EECB2F205AA82D003DE78A /* bitwise */ = {
+		839E67EE205AB9EE0039274B /* ion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83EECB37205AA82D003DE78A /* Build configuration list for PBXNativeTarget "bitwise" */;
+			buildConfigurationList = 839E67F3205AB9EE0039274B /* Build configuration list for PBXNativeTarget "ion" */;
 			buildPhases = (
-				83EECB2C205AA82D003DE78A /* Sources */,
-				83EECB2D205AA82D003DE78A /* Frameworks */,
-				83EECB2E205AA82D003DE78A /* CopyFiles */,
+				839E67EB205AB9EE0039274B /* Sources */,
+				839E67EC205AB9EE0039274B /* Frameworks */,
+				839E67ED205AB9EE0039274B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = bitwise;
-			productName = bitwise;
-			productReference = 83EECB30205AA82D003DE78A /* bitwise */;
+			name = ion;
+			productName = ion;
+			productReference = 839E67EF205AB9EE0039274B /* ion */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -83,7 +87,7 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Christopher Osterwood";
 				TargetAttributes = {
-					83EECB2F205AA82D003DE78A = {
+					839E67EE205AB9EE0039274B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -97,26 +101,43 @@
 				en,
 			);
 			mainGroup = 83EECB27205AA82C003DE78A;
-			productRefGroup = 83EECB31205AA82D003DE78A /* Products */;
+			productRefGroup = 83EECB27205AA82C003DE78A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83EECB2F205AA82D003DE78A /* bitwise */,
+				839E67EE205AB9EE0039274B /* ion */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		83EECB2C205AA82D003DE78A /* Sources */ = {
+		839E67EB205AB9EE0039274B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839E67F9205ABA040039274B /* ion.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		839E67F4205AB9EE0039274B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		839E67F5205AB9EE0039274B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		83EECB35205AA82D003DE78A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -220,39 +241,23 @@
 			};
 			name = Release;
 		};
-		83EECB38205AA82D003DE78A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		83EECB39205AA82D003DE78A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		839E67F3205AB9EE0039274B /* Build configuration list for PBXNativeTarget "ion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839E67F4205AB9EE0039274B /* Debug */,
+				839E67F5205AB9EE0039274B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83EECB2B205AA82C003DE78A /* Build configuration list for PBXProject "bitwise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83EECB35205AA82D003DE78A /* Debug */,
 				83EECB36205AA82D003DE78A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83EECB37205AA82D003DE78A /* Build configuration list for PBXNativeTarget "bitwise" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83EECB38205AA82D003DE78A /* Debug */,
-				83EECB39205AA82D003DE78A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
